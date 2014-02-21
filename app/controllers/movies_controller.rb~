@@ -8,7 +8,6 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
-    @all_ratings = Movie.getRatings
     if params[:sorting_by] == 'title'
         @title_header = 'hilite'
         @movies = Movie.order("title")
